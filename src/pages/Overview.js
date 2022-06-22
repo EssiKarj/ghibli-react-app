@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import MovieDisplay from '../components/MovieDisplay'
 
 const Overview = ({ movieData, setMovieData, setMovie }) => {
+  //API request to execute on first render of the page and store first fove movies to movieData state
   useEffect(() => {
     const getData = async () => {
       const response = await fetch('https://ghibliapi.herokuapp.com/films')
@@ -11,7 +12,6 @@ const Overview = ({ movieData, setMovieData, setMovie }) => {
 
     getData()
   }, [])
-
 
   return (
     <div className='main-container'>
