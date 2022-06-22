@@ -1,11 +1,68 @@
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #0e0e0e;
+  color: #2c2c2c;
+  background-color: #e6e6e6;
   //border: 1px solid red;
 }
 
-body{
-  background-color: #e6e6e6;
+p, h3{
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button{
+  border-top: 1px solid #0e0e0e;
+  border-bottom: 1px solid #0e0e0e;
+  border-right: none;
+  border-left: none;
+  padding: 7px;
+  width: 7vw;
+}
+
+.main-container{
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+  .display-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vh;
+    background-image: url('../images/totoro-bg.png');
+    background-repeat: no-repeat;
+    .display-bg{
+      background-image: url('../images/bg-wave.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      .display-img{
+        img{
+          height: 60vh;
+        }
+      }
+    }
+    .display-text{
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+      width: 50%;
+    }
+  }
+}
+
+.movie-page-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  img{
+    height: 50vh;
+  }
 }

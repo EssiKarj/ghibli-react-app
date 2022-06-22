@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import MovieDisplay from '../components/MovieDisplay'
 
-const Overview = () => {
-  const [movieData, setMovieData] = useState({})
-
+const Overview = ({ movieData, setMovieData, setMovie }) => {
   useEffect(() => {
     const getData = async () => {
       const response = await fetch('https://ghibliapi.herokuapp.com/films')
@@ -16,7 +14,7 @@ const Overview = () => {
 
 
   return (
-    <div>
+    <div className='main-container'>
       {movieData.length ?
         movieData.map((movie, index) => {
           return <MovieDisplay
@@ -25,6 +23,7 @@ const Overview = () => {
             title={movie.title}
             description={movie.description}
             id={index}
+            setMovie={setMovie}
           />
         })
         :

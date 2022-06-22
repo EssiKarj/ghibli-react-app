@@ -1,13 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const Button = ({ action, index }) => {
+const Button = ({ action, id, setMovie }) => {
+  const navigate = useNavigate()
+
   const handleClick = (action, index) => {
-    if (action === 'BACK') return
-    if (action === 'SEE MORE') return
+    if (action === 'BACK') navigate(-1)
+    if (action === 'SEE MORE') {
+      setMovie(index)
+      navigate(`/${index}`)
+    }
   }
 
   return (
-    <button onClick={() => handleClick(action, index)}>{action}</button>
+    <button onClick={() => handleClick(action, id)}>{action}</button>
   )
 }
 
