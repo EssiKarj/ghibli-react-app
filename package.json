@@ -1,6 +1,5 @@
 {
   "name": "umi-react-app",
-  "homepage": "https://essikarj.github.io/ghibli-react-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
