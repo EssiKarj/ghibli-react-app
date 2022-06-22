@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ghibli-react-app/static/css/main.99d6323e.css",
+    "main.js": "/ghibli-react-app/static/js/main.e21fc660.js",
+    "static/media/bg-wave.svg": "/ghibli-react-app/static/media/bg-wave.2bd6bd72b2943bad48b0214540fceb29.svg",
+    "static/media/totoro-bg.png": "/ghibli-react-app/static/media/totoro-bg.13fe3b4fc2fc462ef6cd.png",
+    "index.html": "/ghibli-react-app/index.html",
+    "main.99d6323e.css.map": "/ghibli-react-app/static/css/main.99d6323e.css.map",
+    "main.e21fc660.js.map": "/ghibli-react-app/static/js/main.e21fc660.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99d6323e.css",
+    "static/js/main.e21fc660.js"
+  ]
+}
