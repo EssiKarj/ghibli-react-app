@@ -7,8 +7,8 @@ import waveBackground from '../images/bg-wave.svg'
 const MovieDisplay = ({ image, title, description, id, setMovie }) => (
   <div className='display-container'>
     <div className='display-bg'>
-      <img className='movie-img' src={image} alt='movie poster'></img>
-      <img className='wave-bg' src={waveBackground} alt='wave background'></img>
+      <img className='movie-img' src={image} alt='movie poster' />
+      <img className='wave-bg' src={waveBackground} alt='wave background' />
     </div>
     <div className='display-text'>
       <h2>{title}</h2>
