@@ -6,6 +6,7 @@ import waveBackground from '../images/bg-wave.svg'
 
 const MovieDisplay = ({ image, title, description, id, setMovie }) => (
   <div className='display-container'>
+    <div className='totoro-bg'></div>
     <div className='display-bg'>
       <img className='movie-img' src={image} alt='movie poster' />
       <img className='wave-bg' src={waveBackground} alt='wave background' />

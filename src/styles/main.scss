@@ -25,38 +25,39 @@ button{
 }
 
 .main-container{
-  margin: 50px 0;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 100px;
+  overflow: hidden;
+  gap: 120px;
   .display-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
     gap: 10vh;
-    background-image: url('../images/totoro-bg.png');
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 80vw;
-    .display-bg{
-      height: 52vh;
-      width: 22%;
-      overflow: hidden;
-      .movie-img{
-        height: 50%;
-        width: auto;
-        z-index: 1;
-        position: absolute;
-      }
-      .wave-bg{
-        height: 100%;
-        width: auto;
-        margin-bottom: 55%;
-        margin-left: -50%;
-      }
-      }
+    .totoro-bg{
+      background-image: url('../images/totoro-bg.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+      // Position
+      position: absolute;
+      height: 110%;
+      width: 460px;
+      top: 5%;
+      right: -20%;
+      // Mirror/flip image
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      //Opacity
+      opacity: 10%;
+    }
     }
     .display-text{
       margin-top: 3vh;
@@ -80,7 +81,42 @@ button{
   }
 }
 
+//Layered images: movie poster - wave image
+.display-bg{
+  position: relative;
+  height: 400px;
+  width: 300px;
+  overflow: hidden;
+  .movie-img{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    //display: none;
+  }
+  .wave-bg{
+    height: 100%;
+    z-index: 0;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+  }
+}
+
+// tablet size up
+@media screen and (min-width: 481px){
+
 .display-container:nth-child(2),
 .display-container:nth-child(4){
   flex-direction: row-reverse;
+  .totoro-bg{
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    top: 5%;
+    left: -20%;
+  }
+}
 }
